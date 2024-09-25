@@ -20,7 +20,7 @@ app.get("/auth/login", (req,res)=>{
     url: 'https://accounts.spotify.com/api/token',
     form: {
       code: code,
-      redirect_uri: "/auth/callback",
+      redirect_uri: "https://riff-ready-server-8bncjf79e-matts-projects-34ff5dbc.vercel.app/auth/callback",
       grant_type: 'authorization_code'
     },
     headers: {
@@ -37,6 +37,13 @@ app.get("/auth/login", (req,res)=>{
     }
   });
 });
+
+app.get('/auth/token', (req, res) => {
+    res.json(
+       {
+          access_token: access_token
+       })
+  })
 
 app.get("/auth/callback", (req,res)=>{
 
