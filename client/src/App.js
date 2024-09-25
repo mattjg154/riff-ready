@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import WebPlayback from './WebPlayback'
+import WebPlayback from './Webplayback'
 import Login from './Login'
 import './App.css';
 
